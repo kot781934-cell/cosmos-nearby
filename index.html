@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="kk" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos Nearby — Білім беру астрономиялық дәрісханасы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Nav Component -->
+    <header class="site-header">
+        <div class="logo">Cosmos Nearby</div>
+        <nav class="main-nav">
+            <a href="#playbill">Playbill</a>
+            <a href="#speakers">Speakers</a>
+            <a href="#podcasts">Podcasts</a>
+        </nav>
+        <button class="cta-button">Buy a Ticket</button>
+    </header>
+
+    <main>
+        <!-- Hero Section Component -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Simply About the Structure of the Universe</h1>
+                <p>Ашық дәрістер кестесі, әлемнің құпиялары және ең үздік спикерлер.</p>
+                <a href="#playbill" class="hero-btn">Есебі мен кестесін көру</a>
+            </div>
+        </section>
+
+        <!-- Grid Section Component -->
+        <section id="playbill" class="grid-section">
+            <h2>Дәрістер кестесі</h2>
+            <div class="lecture-grid">
+                
+                <article class="card">
+                    <span class="time-tag">15 Қараша, 18:00</span>
+                    <h3>Қара тесіктер мен кеңістік кривизнасы</h3>
+                    <p class="speaker">Спикер: Др. Олжас Аметов (PhD)</p>
+                    <span class="status status-available">Бос орындар бар</span>
+                </article>
+
+                <article class="card">
+                    <span class="time-tag">22 Қараша, 19:00</span>
+                    <h3>Күн жүйесінен тыс экзопланеталар</h3>
+                    <p class="speaker">Спикер: Ақтамберді Ербулатұлы (Астрофизик)</p>
+                    <span class="status status-available">Бос орындар бар</span>
+                </article>
+
+                <article class="card">
+                    <span class="time-tag">01 Желтоқсан, 17:30</span>
+                    <h3>Үлкен жарылыс және ғаламның эволюциясы</h3>
+                    <p class="speaker">Спикер: Проф. А. Жұмабеков</p>
+                    <span class="status status-limited">Аз орын қалды</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Feedback Form Component -->
+        <section class="feedback-section">
+            <h2>Онлайн трансляцияға тіркелу</h2>
+            <form class="broadcast-form">
+                <div class="form-group">
+                    <label for="name">Аты-жөніңіз:</label>
+                    <input type="text" id="name" name="name" placeholder="Атыңызды енгізіңіз" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Электронды пошта (Email):</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                </div>
+                <button type="submit" class="submit-btn">Тіркелу</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="site-footer">
+        <div class="footer-links">
+            <p>Серіктес обсерваториялар:</p>
+            <a href="#">Асы-Түрген обсерваториясы</a> | 
+            <a href="#">Ғарыштық зерттеулер институты</a>
+        </div>
+        <div class="theme-toggle">
+            <button id="themeToggleBtn">Теманы ауыстыру (Dark/Light)</button>
+        </div>
+        <p class="legal">&copy; 2026 Cosmos Nearby. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('themeToggleBtn');
+        btn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', targetTheme);
+        });
+    </script>
+</body>
+</html>
