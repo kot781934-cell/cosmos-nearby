@@ -87,14 +87,22 @@
         </div>
         <p class="legal">&copy; 2026 Cosmos Nearby. Барлық құқықтар қорғалған.</p>
     </footer>
-
-    <script>
+<script>
+        // Теманы ауыстыру скрипті
         const btn = document.getElementById('themeToggleBtn');
         btn.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', targetTheme);
         });
+
+        // Тіркелу формасы жұмыс істеуі үшін скрипт
+        const form = document.querySelector('.broadcast-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Беттің қайта жүктелуін болдырмайды
+            alert('Трансляцияға сәтті тіркелдіңіз!');
+            form.reset(); // Өрістерді тазалайды
+        });
     </script>
-</body>
+    </body>
 </html>
